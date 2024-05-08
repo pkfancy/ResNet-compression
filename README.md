@@ -5,7 +5,7 @@ To compress the ResNet by merging BN to adjacent former Conv layer, for both of 
 # separate conv and bn
 # conv_w: [C1, C, h, w], conv_b: [C1]
 # bn_w, bn_b, mean, var: [C1]
-# amount of parameters: C1 * (C * h * w + 2)
+# amount of parameters: C1 * (C * h * w + 5)
 x = conv(x, conv_w, conv_b)
 x = batchnorm(x, bn_w, bn_b, mean, var, eps)
 
